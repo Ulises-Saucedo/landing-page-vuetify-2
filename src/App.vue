@@ -6,18 +6,19 @@
       <router-view/>
     </v-main>
 
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
+    <footerView></footerView>
   </v-app>
 </template>
 
 <script>
-import headerView from './components/header.vue'
+import headerView from './components/header.vue';
+import footerView from './components/footer.vue';
 
 export default {
   name: 'App',
   components:{
     headerView,
+    footerView,
   },
   data: () => ({
     //

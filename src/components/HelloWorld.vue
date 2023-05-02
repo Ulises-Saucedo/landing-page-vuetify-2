@@ -1,93 +1,274 @@
 <template>
   <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+    <div class="relative">
+      <v-img  src="../assets/images/woove-resources/753cd5162182359.63d1626546e52.jpg"></v-img>
+      <v-btn outlined rounded class="absolute">Winter sale</v-btn>
+    </div>
+  
+    <div class="d-flex justify-center">
+      <v-carousel hide-delimiters  cycle class="mt-12 carousel">
+        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src">
+        </v-carousel-item>
+      </v-carousel>
+    </div>  
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
+        
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
-      </v-col>
+        <div class="justify-center mt-12 	d-flex d-sm-none">
+                <v-row>
+                    <v-col cols="12">
+                        <v-row>
+                            <v-col cols="12">
+                              <v-row>
+                                <v-col cols="12" class="d-flex justify-center">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Other products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_09.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12">
+                              <v-row>
+                                <v-col cols="12" class="d-flex justify-center">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Last products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_04.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12">
+                              <v-row>
+                                <v-col cols="12" class="d-flex justify-center">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Muscle shirt
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_13.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </div>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
+            <div class="justify-center mt-12 	d-none d-sm-flex d-md-none">
+                <v-row>
+                    <v-col cols="12">
+                        <v-row>
+                            <v-col cols="12">
+                              <v-row>
+                                <v-col cols="12" class="d-flex justify-center">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Other products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_09.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12">
+                              <v-row>
+                                <v-col cols="12" class="d-flex justify-center">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Last products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_04.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="12">
+                              <v-row>
+                                <v-col cols="12" class="d-flex justify-center">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Muscle shirt
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_13.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </div>
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+            <div class="justify-center mt-12 	d-none d-md-flex d-lg-none">
+                <v-row>
+                    <v-col cols="12">
+                        <v-row>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Other products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_09.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Last products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_04.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Muscle shirt
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_13.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </div>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
 
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
+            <div class="justify-center mt-12 	d-none d-lg-flex d-xl-none">
+                <v-row>
+                    <v-col cols="12">
+                        <v-row>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Other products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_09.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Last products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_04.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Muscle shirt
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_13.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </div>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
-    </v-row>
+            <div class="justify-center mt-12 	d-none d-xl-flex">
+                <v-row>
+                    <v-col cols="12">
+                        <v-row>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Other products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_09.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Last products
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_04.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                            <v-col cols="4">
+                              <v-row>
+                                <v-col cols="12">
+                                  <router-link to="/products">
+                                    <v-card width="300px" color="teal darken-3" class="white--text">
+                                      <v-card-title>
+                                        Muscle shirt
+                                      </v-card-title>
+                                      <v-img src="../assets/images/sportwear/13234-001_1_13.jpg"></v-img>
+                                    </v-card>
+                                  </router-link>
+                                </v-col>
+                              </v-row>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                </v-row>
+            </div>
   </v-container>
 </template>
 
@@ -95,57 +276,38 @@
   export default {
     name: 'HelloWorld',
 
-    data: () => ({
-      ecosystem: [
+    data() {
+      return {
+      items: [
         {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
+          src: require('../assets/images/sportwear/13234-001_1_01.jpg'),
         },
         {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
+          src: require('../assets/images/sportwear/13234-001_1_03.jpg'),
         },
         {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
-  }
+          src: require('../assets/images/sportwear/13234-001_1_08.jpg'),
+        }
+      ]
+    }
+      
+  }}
+  
+
+  
 </script>
+
+<style>
+  .relative{
+    position: relative;
+  }
+  .absolute{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+  }
+  .carousel{
+    width: 50%;
+  }
+  
+</style>
